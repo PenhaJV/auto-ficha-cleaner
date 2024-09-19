@@ -65,7 +65,7 @@ def confirmar_remocao():
         alert = WebDriverWait(driver, 5).until(EC.alert_is_present())
         alert.accept()  # ou alert.accept() dependendo do que você precisa
         sleep(1)
-    except selenium.common.exceptions.TimeoutException:
+    except TimeoutException:
         pass  # Nenhum alerta apareceu
 
 
