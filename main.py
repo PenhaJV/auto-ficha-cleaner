@@ -15,10 +15,7 @@ driver.get('https://www.vagas.com.br/')  # Site a ser acessado
 sleep(5)  # Aguardar o site Carregar
 
 
-def login():
-    login = "joaovitorpenha@hotmail.com"
-    senha = "Jv@ncfom1994"
-
+def fazer_login(login, senha):
     botao_entrar = driver.find_element(
         By.XPATH, "//a[@id='main-navigation__signin']")
     botao_entrar.click()
@@ -70,7 +67,10 @@ def confirmar_remocao():
 
 
 def app():
-    login()
+    login = ""
+    senha = ""
+
+    fazer_login(login, senha)
     menu_lateral()
 
     while True:
